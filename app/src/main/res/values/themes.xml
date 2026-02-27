@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RahaRawhey" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="Theme.RahaRawhey.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#0A0F1E</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_mosque</item>
+        <item name="windowSplashScreenIconBackgroundColor">#0A0F1E</item>
+        <item name="postSplashScreenTheme">@style/Theme.RahaRawhey</item>
+    </style>
+</resources>

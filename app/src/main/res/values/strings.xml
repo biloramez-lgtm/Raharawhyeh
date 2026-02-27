@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">رها روحي</string>
+    <string name="prayer_fajr">الفجر</string>
+    <string name="prayer_sunrise">الشروق</string>
+    <string name="prayer_dhuhr">الظهر</string>
+    <string name="prayer_asr">العصر</string>
+    <string name="prayer_maghrib">المغرب</string>
+    <string name="prayer_isha">العشاء</string>
+    <string name="qibla_direction">اتجاه القبلة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="permission_location_rationale">يحتاج التطبيق للوصول إلى موقعك لتحديد أوقات الصلاة واتجاه القبلة بدقة</string>
+</resources>
