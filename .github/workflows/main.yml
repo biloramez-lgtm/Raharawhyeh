@@ -11,20 +11,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # استنساخ المشروع
+      # 1️⃣ استنساخ المشروع
       - uses: actions/checkout@v3
 
-      # إعداد JDK 17
+      # 2️⃣ إعداد JDK 17
       - name: Setup JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # تأكد من صلاحية gradlew
+      # 3️⃣ تأكد من صلاحية gradlew
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      # بناء Release Bundle باستخدام Gradle Wrapper
-      - name: Build Release Bundle
-        run: ./gradlew :app:bundleRelease --no-daemon
+      # 4️⃣ بناء AAB وAPK
+      - name: Build Release Bundle and APK
+        run: ./gradlew :app:bundleRelease :app:assembleRelease --no-daemon
+
+      # 5️⃣ رفع الملفات الناتجة كـ artifacts
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts
+          path: |
+            app/build/outputs/bundle/release/app-release.aab
+            app/build/outputs/apk/release/app-release.apk
