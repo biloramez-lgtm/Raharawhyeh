@@ -3,10 +3,10 @@ name: Android Release Build
 on:
   push:
     branches:
-      - main   # عند الدفع إلى الفرع الرئيسي
+      - main
   pull_request:
     branches:
-      - main   # عند عمل Pull Request على الفرع الرئيسي
+      - main
 
 jobs:
   build:
@@ -32,9 +32,9 @@ jobs:
       - name: Build Release Bundle
         run: gradle bundleRelease --no-daemon
 
-      # 5️⃣ رفع الـ artifact (اختياري، لو تريد تحميل الـ AAB بعد البناء)
+      # 5️⃣ رفع الـ artifact (استخدام النسخة الحديثة)
       - name: Upload Release Bundle
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-release-bundle
           path: app/build/outputs/bundle/release/*.aab
