@@ -56,3 +56,7 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ff4c504469c28f49f0f701fdfc22393252f5d445
