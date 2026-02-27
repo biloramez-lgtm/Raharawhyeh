@@ -1,14 +1,32 @@
+name: Android Release Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # 1️⃣ استنساخ المشروع
       - uses: actions/checkout@v3
+
+      # 2️⃣ إعداد JDK 17
       - name: Setup JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Install Gradle
-        run: sudo apt-get update && sudo apt-get install -y gradle
+
+      # 3️⃣ تحميل Gradle الرسمي مباشرة
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
+        with:
+          gradle-version: '8.3'   # استخدم نسخة متوافقة مع Android Gradle Plugin
+
+      # 4️⃣ بناء Release Bundle
       - name: Build Release Bundle
         run: gradle :app:bundleRelease --no-daemon
