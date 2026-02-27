@@ -1,0 +1,35 @@
+# Android/Kotlin
+.gradle/
+build/
+local.properties
+*.iml
+*.log
+
+# Binaries
+*.jar
+*.apk
+*.dex
+
+# IDE
+.idea/
+.DS_Store# Android / Kotlin
+.gradle/
+build/
+local.properties
+*.iml
+*.log
+
+# Binaries
+*.jar
+*.apk
+*.dex
+
+# IDE
+.idea/
+.DS_Store# Android / Kotlin
+/build/
+/.gradle/
+/local.properties
+*.iml
+*.hprof
+*.log
